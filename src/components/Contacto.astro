@@ -1,0 +1,198 @@
+---
+// src/components/Contacto.astro
+const meetLink = "https://calendar.app.google/EzD8M4sdQE9x96oPA";
+const whatsappNumber = "525500000000"; // Reemplaza con tu número de México (o el país correspondiente)
+const whatsappMessage = "Hola DVUX, me interesa digitalizar mi negocio.";
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+---
+
+<section
+    id="contacto"
+    class="py-32 relative z-10 bg-slate-950 overflow-hidden border-t border-white/5"
+>
+    <!-- ========================================== -->
+    <!-- CAPA DE FONDO: Grid y Auroras              -->
+    <!-- ========================================== -->
+    <div class="absolute inset-0 pointer-events-none z-0">
+        <div class="absolute inset-0 bg-grid opacity-20"></div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-600/10 blur-[150px] rounded-full"
+        >
+        </div>
+        <div
+            class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-600/20 blur-[150px] rounded-full"
+        >
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <!-- Encabezado -->
+        <div class="text-center mb-20 relative">
+            <div
+                class="inline-flex items-center justify-center p-3 mb-6 bg-slate-900/50 backdrop-blur-md border border-slate-700/50 rounded-2xl shadow-[0_0_20px_rgba(6,182,212,0.3)]"
+            >
+                <span class="text-cyan-400 font-mono font-bold text-lg px-2"
+                    >Ctrl</span
+                >
+                <span class="text-slate-500 mx-2">+</span>
+                <span class="text-cyan-400 font-mono font-bold text-lg px-2"
+                    >Space</span
+                >
+            </div>
+            <h2
+                class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg"
+            >
+                Iniciemos tu <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 animate-gradient-x"
+                    >Transformación</span
+                >
+            </h2>
+            <p
+                class="text-slate-300 max-w-2xl mx-auto text-lg md:text-xl font-medium"
+            >
+                Cero formularios aburridos. Elige el canal que prefieras y
+                hablemos hoy mismo sobre cómo escalar tu negocio.
+            </p>
+        </div>
+
+        <!-- Opciones de Contacto -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Opción 1: Google Meet (Calendly alternative) -->
+            <a
+                href={meetLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative bg-slate-900/30 backdrop-blur-xl rounded-3xl p-10 border border-white/10 hover:border-purple-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(168,85,247,0.3)] flex flex-col items-center text-center overflow-hidden"
+            >
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                >
+                </div>
+
+                <!-- Ícono Meet/Calendario -->
+                <div
+                    class="w-20 h-20 bg-slate-950 border-2 border-slate-700/50 rounded-2xl flex items-center justify-center mb-6 group-hover:border-purple-400 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-all duration-300 z-10"
+                >
+                    <svg
+                        class="w-10 h-10 text-purple-400 group-hover:scale-110 transition-transform"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                        ></path>
+                    </svg>
+                </div>
+
+                <h3
+                    class="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors z-10"
+                >
+                    Videollamada
+                </h3>
+                <p class="text-slate-300 mb-8 z-10">
+                    Agenda una asesoría gratuita por Google Meet. Veremos tu
+                    negocio a detalle y trazaremos un plan de acción digital.
+                </p>
+
+                <div
+                    class="mt-auto bg-purple-500 text-white px-8 py-3 rounded-xl font-bold w-full group-hover:bg-purple-400 transition-colors shadow-[0_0_15px_rgba(168,85,247,0.4)] z-10"
+                >
+                    Agendar en Calendario
+                </div>
+            </a>
+
+            <!-- Opción 2: WhatsApp Directo -->
+            <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative bg-slate-900/30 backdrop-blur-xl rounded-3xl p-10 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(6,182,212,0.3)] flex flex-col items-center text-center overflow-hidden"
+            >
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                >
+                </div>
+
+                <!-- Ícono WhatsApp/Chat -->
+                <div
+                    class="w-20 h-20 bg-slate-950 border-2 border-slate-700/50 rounded-2xl flex items-center justify-center mb-6 group-hover:border-cyan-400 group-hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transition-all duration-300 z-10"
+                >
+                    <svg
+                        class="w-10 h-10 text-cyan-400 group-hover:scale-110 transition-transform"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                        ></path>
+                    </svg>
+                </div>
+
+                <h3
+                    class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors z-10"
+                >
+                    Chat Inmediato
+                </h3>
+                <p class="text-slate-300 mb-8 z-10">
+                    ¿Tienes una duda rápida? Escríbenos directamente por
+                    WhatsApp y te responderemos en minutos.
+                </p>
+
+                <div
+                    class="mt-auto bg-cyan-500 text-slate-950 px-8 py-3 rounded-xl font-bold w-full group-hover:bg-cyan-400 transition-colors shadow-[0_0_15px_rgba(6,182,212,0.4)] z-10"
+                >
+                    Abrir WhatsApp
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Cuadrícula Tecnológica (Igual al resto para fluidez) */
+    .bg-grid {
+        background-size: 50px 50px;
+        background-image:
+            linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0.05) 1px,
+                transparent 1px
+            ),
+            linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.05) 1px,
+                transparent 1px
+            );
+        animation: pan-grid 20s linear infinite;
+    }
+    @keyframes pan-grid {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(50px);
+        }
+    }
+
+    .animate-gradient-x {
+        background-size: 200% 200%;
+        animation: gradiente-texto 5s ease infinite;
+    }
+    @keyframes gradiente-texto {
+        0%,
+        100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+</style>
