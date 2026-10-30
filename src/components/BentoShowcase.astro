@@ -1,0 +1,193 @@
+---
+// src/components/BentoShowcase.astro
+---
+
+<section class="relative py-24 bg-slate-950 overflow-hidden">
+    <!-- Fondo con rejilla y luz central neón -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute inset-0 bg-grid-purple opacity-10"></div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-purple-900/20 blur-[160px] rounded-full"
+        >
+        </div>
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+        <!-- Encabezado -->
+        <div class="text-center mb-16">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full bg-purple-950/50 border border-purple-500/20 backdrop-blur-md"
+            >
+                <span class="text-xs text-purple-300 font-mono"
+                    >Ctrl + Alt + V</span
+                >
+                <span class="text-xs text-slate-400">• Control Total</span>
+            </div>
+            <h2
+                class="text-3xl md:text-5xl font-extrabold text-white tracking-tight"
+            >
+                Todo lo que necesitas para <br />
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-cyan-300"
+                >
+                    dominar tu mercado digital.
+                </span>
+            </h2>
+        </div>
+
+        <!-- BENTO GRID CONTAINER -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px]">
+            <!-- CAJA 1 (Grande - 2x2): Promesa principal con el Orbe central -->
+            <div
+                class="md:col-span-2 md:row-span-2 relative bg-slate-900/90 border border-white/10 rounded-[2rem] p-8 flex flex-col justify-between overflow-hidden group hover:border-purple-500/40 transition-all"
+            >
+                <div
+                    class="absolute -bottom-10 -right-10 w-48 h-48 bg-purple-600/30 blur-2xl rounded-full group-hover:bg-purple-600/50 transition-all"
+                >
+                </div>
+
+                <div>
+                    <span
+                        class="text-xs font-mono text-purple-400 bg-purple-950/60 border border-purple-800/40 px-2.5 py-1 rounded-full"
+                        >Paso a lo Digital</span
+                    >
+                    <h3
+                        class="text-2xl md:text-3xl font-bold text-white mt-4 leading-tight"
+                    >
+                        Evolución digital a la medida de tu negocio.
+                    </h3>
+                    <p class="text-slate-400 text-sm mt-3">
+                        Llevamos tus procesos en papel, registros y atención
+                        manual hacia un ecosistema web moderno, automatizado e
+                        inteligente.
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-3 pt-4">
+                    <div
+                        class="w-10 h-10 bg-slate-950 border border-slate-800 rounded-xl flex items-center justify-center font-mono font-bold text-cyan-400 shadow-[inset_0_-2px_0_#1e293b]"
+                    >
+                        ⚡
+                    </div>
+                    <span class="text-xs font-mono text-slate-300"
+                        >Respuesta en menos de 24h</span
+                    >
+                </div>
+            </div>
+
+            <!-- CAJA 2 (1x1): Métrica Carga Web -->
+            <div
+                class="bg-slate-900/90 border border-white/10 rounded-[2rem] p-6 flex flex-col justify-between hover:border-cyan-500/40 transition-all"
+            >
+                <span class="text-xs font-mono text-slate-400"
+                    >Rendimiento Web</span
+                >
+                <div>
+                    <p class="text-3xl font-extrabold text-cyan-400 font-mono">
+                        &lt; 1s
+                    </p>
+                    <p class="text-xs text-slate-400 mt-1">
+                        Tiempo de carga optimizado
+                    </p>
+                </div>
+            </div>
+
+            <!-- CAJA 3 (1x1): Switch / Toggle de Tema -->
+            <div
+                class="bg-slate-900/90 border border-white/10 rounded-[2rem] p-6 flex flex-col justify-between hover:border-purple-500/40 transition-all"
+            >
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-slate-400"
+                        >Modo 24/7</span
+                    >
+                    <div
+                        class="w-10 h-6 bg-purple-600/40 rounded-full border border-purple-400/50 flex items-center px-1"
+                    >
+                        <div
+                            class="w-4 h-4 bg-purple-300 rounded-full shadow-md ml-auto"
+                        >
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-300 font-medium">
+                    Agentes de IA y Chatbots activos recibiendo ventas mientras
+                    duermes.
+                </p>
+            </div>
+
+            <!-- CAJA 4 (2x1): Stack de Desarrollo, E-Commerce e IA -->
+            <div
+                class="md:col-span-2 bg-slate-900/90 border border-white/10 rounded-[2rem] p-6 flex flex-col justify-between hover:border-indigo-500/40 transition-all"
+            >
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-mono text-indigo-400"
+                        >Ecosistema Técnico & IA</span
+                    >
+                    <span
+                        class="text-[10px] font-mono text-slate-500 border border-slate-800 px-2 py-0.5 rounded-full"
+                        >Full Stack</span
+                    >
+                </div>
+
+                <!-- Chips interactivos categorizados -->
+                <div class="flex flex-wrap gap-1.5 my-1.5">
+                    <!-- Desarrollo Web Apps -->
+                    <span
+                        class="text-[11px] font-mono bg-cyan-950/60 border border-cyan-800/40 text-cyan-300 px-2.5 py-0.5 rounded-full"
+                        >Frontend & Backend</span
+                    >
+                    <span
+                        class="text-[11px] font-mono bg-slate-950 border border-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full"
+                        >Web Apps</span
+                    >
+
+                    <!-- E-Commerce -->
+                    <span
+                        class="text-[11px] font-mono bg-slate-950 border border-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full"
+                        >Shopify</span
+                    >
+                    <span
+                        class="text-[11px] font-mono bg-slate-950 border border-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full"
+                        >WooCommerce</span
+                    >
+
+                    <!-- Inteligencia Artificial & Agentes -->
+                    <span
+                        class="text-[11px] font-mono bg-purple-950/80 border border-purple-700/50 text-purple-300 px-2.5 py-0.5 rounded-full"
+                        >Agentes IA</span
+                    >
+                    <span
+                        class="text-[11px] font-mono bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 px-2.5 py-0.5 rounded-full"
+                        >OpenAI API</span
+                    >
+                    <span
+                        class="text-[11px] font-mono bg-blue-950/80 border border-blue-700/50 text-blue-300 px-2.5 py-0.5 rounded-full"
+                        >Gemini API</span
+                    >
+                </div>
+
+                <p class="text-xs text-slate-500">
+                    Soluciones a medida conectando plataformas E-Commerce,
+                    arquitectura Full Stack e IA.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .bg-grid-purple {
+        background-size: 40px 40px;
+        background-image:
+            linear-gradient(
+                to right,
+                rgba(168, 85, 247, 0.08) 1px,
+                transparent 1px
+            ),
+            linear-gradient(
+                to bottom,
+                rgba(168, 85, 247, 0.08) 1px,
+                transparent 1px
+            );
+    }
+</style>

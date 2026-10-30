@@ -1,155 +1,161 @@
 ---
 // src/components/Contacto.astro
 const meetLink = "https://calendar.app.google/EzD8M4sdQE9x96oPA";
-const whatsappNumber = "525500000000"; // Reemplaza con tu número de México (o el país correspondiente)
-const whatsappMessage = "Hola DVUX, me interesa digitalizar mi negocio.";
+const whatsappNumber = "525500000000"; // Reemplaza con tu número real
+const whatsappMessage =
+    "Hola Shift Digital, me interesa digitalizar mi negocio.";
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 ---
 
 <section
     id="contacto"
-    class="py-32 relative z-10 bg-slate-950 overflow-hidden border-t border-white/5"
+    class="relative py-28 bg-slate-950 overflow-hidden border-t border-purple-500/10"
 >
-    <!-- ========================================== -->
-    <!-- CAPA DE FONDO: Grid y Auroras              -->
-    <!-- ========================================== -->
-    <div class="absolute inset-0 pointer-events-none z-0">
-        <div class="absolute inset-0 bg-grid opacity-20"></div>
+    <!-- FONDOS Y EFECTOS DE LUZ -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute inset-0 bg-grid-purple opacity-10"></div>
         <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-600/10 blur-[150px] rounded-full"
-        >
-        </div>
-        <div
-            class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-600/20 blur-[150px] rounded-full"
+            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-t from-purple-600/20 via-indigo-600/10 to-transparent blur-[160px] rounded-full"
         >
         </div>
     </div>
 
-    <div class="max-w-5xl mx-auto px-6 relative z-10">
-        <!-- Encabezado -->
-        <div class="text-center mb-20 relative">
+    <!-- Ajustado a max-w-6xl para alinear con el resto de la página -->
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+        <!-- ENCABEZADO DE SECCIÓN -->
+        <div class="text-center mb-16">
             <div
-                class="inline-flex items-center justify-center p-3 mb-6 bg-slate-900/50 backdrop-blur-md border border-slate-700/50 rounded-2xl shadow-[0_0_20px_rgba(6,182,212,0.3)]"
+                class="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full bg-purple-950/50 border border-purple-500/20 backdrop-blur-md"
             >
-                <span class="text-cyan-400 font-mono font-bold text-lg px-2"
-                    >Ctrl</span
+                <span class="text-xs text-purple-300 font-mono"
+                    >Ctrl + Space</span
                 >
-                <span class="text-slate-500 mx-2">+</span>
-                <span class="text-cyan-400 font-mono font-bold text-lg px-2"
-                    >Space</span
-                >
+                <span class="text-xs text-slate-400">• Contacto Directo</span>
             </div>
             <h2
-                class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg"
+                class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4"
             >
-                Iniciemos tu <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 animate-gradient-x"
-                    >Transformación</span
+                Iniciemos tu <br />
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-cyan-300"
                 >
+                    Transformación Digital.
+                </span>
             </h2>
-            <p
-                class="text-slate-300 max-w-2xl mx-auto text-lg md:text-xl font-medium"
-            >
-                Cero formularios aburridos. Elige el canal que prefieras y
-                hablemos hoy mismo sobre cómo escalar tu negocio.
+            <p class="text-slate-400 max-w-xl mx-auto text-sm md:text-base">
+                Sin formularios extensos. Elige el canal que prefieras y
+                hablemos directamente sobre tu proyecto.
             </p>
         </div>
 
-        <!-- Opciones de Contacto -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <!-- Opción 1: Google Meet (Calendly alternative) -->
+        <!-- TARJETAS DE CONTACTO EN CONTENEDOR ANCHO -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- OPCIÓN 1: GOOGLE MEET (Púrpura) -->
             <a
                 href={meetLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="group relative bg-slate-900/30 backdrop-blur-xl rounded-3xl p-10 border border-white/10 hover:border-purple-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(168,85,247,0.3)] flex flex-col items-center text-center overflow-hidden"
+                class="group relative bg-gradient-to-b from-slate-900/90 via-slate-900/50 to-slate-950/30 backdrop-blur-md rounded-[2rem] p-8 md:p-10 border border-white/10 hover:border-purple-500/40 transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden shadow-2xl hover:shadow-purple-500/10"
             >
+                <!-- Glow Neón Superior y Difuminado Inferior -->
                 <div
-                    class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                    class="absolute top-0 right-0 w-48 h-48 bg-purple-500/15 blur-3xl rounded-full group-hover:bg-purple-500/30 transition-all duration-500"
+                >
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent pointer-events-none"
                 >
                 </div>
 
-                <!-- Ícono Meet/Calendario -->
-                <div
-                    class="w-20 h-20 bg-slate-950 border-2 border-slate-700/50 rounded-2xl flex items-center justify-center mb-6 group-hover:border-purple-400 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-all duration-300 z-10"
-                >
-                    <svg
-                        class="w-10 h-10 text-purple-400 group-hover:scale-110 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                <div class="relative z-10 mb-8">
+                    <div
+                        class="w-14 h-14 bg-slate-950 border border-slate-800 rounded-2xl flex items-center justify-center mb-6 shadow-[inset_0_-2px_0_#1e293b] group-hover:border-purple-400/50 transition-colors"
                     >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                        ></path>
-                    </svg>
+                        <svg
+                            class="w-7 h-7 text-purple-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                            ></path>
+                        </svg>
+                    </div>
+
+                    <h3
+                        class="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors"
+                    >
+                        Videollamada por Google Meet
+                    </h3>
+                    <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                        Agenda una sesión directa de 15 minutos para revisar los
+                        requerimientos de tu negocio y trazar el plan de acción.
+                    </p>
                 </div>
 
-                <h3
-                    class="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors z-10"
-                >
-                    Videollamada
-                </h3>
-                <p class="text-slate-300 mb-8 z-10">
-                    Agenda una asesoría gratuita por Google Meet. Veremos tu
-                    negocio a detalle y trazaremos un plan de acción digital.
-                </p>
-
                 <div
-                    class="mt-auto bg-purple-500 text-white px-8 py-3 rounded-xl font-bold w-full group-hover:bg-purple-400 transition-colors shadow-[0_0_15px_rgba(168,85,247,0.4)] z-10"
+                    class="relative z-10 pt-4 border-t border-white/10 flex items-center justify-between text-sm font-semibold text-purple-300 group-hover:translate-x-1 transition-transform"
                 >
-                    Agendar en Calendario
+                    <span>Agendar en Calendario</span>
+                    <span class="text-lg">→</span>
                 </div>
             </a>
 
-            <!-- Opción 2: WhatsApp Directo -->
+            <!-- OPCIÓN 2: WHATSAPP DIRECTO (Cyan) -->
             <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="group relative bg-slate-900/30 backdrop-blur-xl rounded-3xl p-10 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(6,182,212,0.3)] flex flex-col items-center text-center overflow-hidden"
+                class="group relative bg-gradient-to-b from-slate-900/90 via-slate-900/50 to-slate-950/30 backdrop-blur-md rounded-[2rem] p-8 md:p-10 border border-white/10 hover:border-cyan-500/40 transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden shadow-2xl hover:shadow-cyan-500/10"
             >
                 <div
-                    class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                    class="absolute top-0 right-0 w-48 h-48 bg-cyan-500/15 blur-3xl rounded-full group-hover:bg-cyan-500/30 transition-all duration-500"
+                >
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent pointer-events-none"
                 >
                 </div>
 
-                <!-- Ícono WhatsApp/Chat -->
-                <div
-                    class="w-20 h-20 bg-slate-950 border-2 border-slate-700/50 rounded-2xl flex items-center justify-center mb-6 group-hover:border-cyan-400 group-hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transition-all duration-300 z-10"
-                >
-                    <svg
-                        class="w-10 h-10 text-cyan-400 group-hover:scale-110 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                <div class="relative z-10 mb-8">
+                    <div
+                        class="w-14 h-14 bg-slate-950 border border-slate-800 rounded-2xl flex items-center justify-center mb-6 shadow-[inset_0_-2px_0_#1e293b] group-hover:border-cyan-400/50 transition-colors"
                     >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1.5"
-                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                        ></path>
-                    </svg>
+                        <svg
+                            class="w-7 h-7 text-cyan-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                            ></path>
+                        </svg>
+                    </div>
+
+                    <h3
+                        class="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors"
+                    >
+                        WhatsApp Inmediato
+                    </h3>
+                    <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                        ¿Tienes dudas rápidas sobre un paquete? Escríbenos un
+                        mensaje directo y resolvemos tus preguntas al instante.
+                    </p>
                 </div>
 
-                <h3
-                    class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors z-10"
-                >
-                    Chat Inmediato
-                </h3>
-                <p class="text-slate-300 mb-8 z-10">
-                    ¿Tienes una duda rápida? Escríbenos directamente por
-                    WhatsApp y te responderemos en minutos.
-                </p>
-
                 <div
-                    class="mt-auto bg-cyan-500 text-slate-950 px-8 py-3 rounded-xl font-bold w-full group-hover:bg-cyan-400 transition-colors shadow-[0_0_15px_rgba(6,182,212,0.4)] z-10"
+                    class="relative z-10 pt-4 border-t border-white/10 flex items-center justify-between text-sm font-semibold text-cyan-300 group-hover:translate-x-1 transition-transform"
                 >
-                    Abrir WhatsApp
+                    <span>Abrir Chat de WhatsApp</span>
+                    <span class="text-lg">→</span>
                 </div>
             </a>
         </div>
@@ -157,42 +163,18 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
 </section>
 
 <style>
-    /* Cuadrícula Tecnológica (Igual al resto para fluidez) */
-    .bg-grid {
-        background-size: 50px 50px;
+    .bg-grid-purple {
+        background-size: 40px 40px;
         background-image:
             linear-gradient(
                 to right,
-                rgba(255, 255, 255, 0.05) 1px,
+                rgba(168, 85, 247, 0.08) 1px,
                 transparent 1px
             ),
             linear-gradient(
                 to bottom,
-                rgba(255, 255, 255, 0.05) 1px,
+                rgba(168, 85, 247, 0.08) 1px,
                 transparent 1px
             );
-        animation: pan-grid 20s linear infinite;
-    }
-    @keyframes pan-grid {
-        0% {
-            transform: translateY(0);
-        }
-        100% {
-            transform: translateY(50px);
-        }
-    }
-
-    .animate-gradient-x {
-        background-size: 200% 200%;
-        animation: gradiente-texto 5s ease infinite;
-    }
-    @keyframes gradiente-texto {
-        0%,
-        100% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
     }
 </style>

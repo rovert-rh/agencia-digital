@@ -2,216 +2,230 @@
 // src/components/Services.astro
 ---
 
-<section
-    id="servicios"
-    class="py-32 relative z-10 bg-slate-950 overflow-hidden min-h-screen flex flex-col justify-center"
->
-    <!-- ========================================== -->
-    <!-- CAPA DE FONDO 2D: Grid y Orbes Neón        -->
-    <!-- ========================================== -->
-    <div class="absolute inset-0 pointer-events-none z-0">
-        <!-- Cuadrícula en movimiento -->
-        <div class="absolute inset-0 bg-grid opacity-20"></div>
-
-        <!-- Auroras (Orbes) de luz -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-            <div
-                class="orbe orbe-cyan absolute -top-[20%] right-[10%] w-[45vw] h-[45vw] rounded-full blur-[150px] mix-blend-screen opacity-40"
-            >
-            </div>
-            <div
-                class="orbe orbe-purple absolute top-[30%] -left-[10%] w-[50vw] h-[50vw] rounded-full blur-[150px] mix-blend-screen opacity-30"
-            >
-            </div>
-            <div
-                class="orbe orbe-blue absolute -bottom-[10%] right-[20%] w-[40vw] h-[40vw] rounded-full blur-[150px] mix-blend-screen opacity-40"
-            >
-            </div>
+<section id="servicios" class="relative py-28 bg-slate-950 overflow-hidden">
+    <!-- FONDOS Y EFECTOS DE LUZ -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute inset-0 bg-grid-purple opacity-10"></div>
+        <!-- Glow ambiental detrás de la sección -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-purple-900/20 blur-[150px] rounded-full"
+        >
         </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <!-- ========================================== -->
-        <!-- ENCABEZADO CON GRADIENTE ANIMADO           -->
-        <!-- ========================================== -->
-        <div class="text-center mb-20 relative">
-            <h2
-                class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight"
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+        <!-- ENCABEZADO DE SECCIÓN -->
+        <div class="text-center mb-16">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full bg-purple-950/50 border border-purple-500/20 backdrop-blur-md"
             >
-                Actualiza tu <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-500 animate-gradient-x drop-shadow-[0_0_15px_rgba(6,182,212,0.5)]"
-                    >Sistema</span
+                <span class="text-xs text-purple-300 font-mono">Alt + S</span>
+                <span class="text-xs text-slate-400"
+                    >• Soluciones Digitales</span
                 >
-            </h2>
-            <p
-                class="text-slate-300 max-w-2xl mx-auto text-lg md:text-xl font-medium drop-shadow-md"
+            </div>
+            <h2
+                class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4"
             >
-                Llevamos tu negocio tradicional al siguiente nivel. Soluciones
-                prácticas para que vendas más y trabajes menos.
+                Servicios diseñados para <br />
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-cyan-300"
+                >
+                    hacer crecer tu negocio.
+                </span>
+            </h2>
+            <p class="text-slate-400 max-w-xl mx-auto text-sm md:text-base">
+                Especializados en llevar tiendas locales y emprendimientos del
+                mundo análogo al ecosistema digital.
             </p>
         </div>
 
-        <!-- ========================================== -->
-        <!-- GRID DE SERVICIOS (GLASSMORPHISM)          -->
-        <!-- ========================================== -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            <!-- Tarjeta 1: Digitalización Local (CYAN) -->
+        <!-- GRID DE TARJETAS ESTILO NEON UI -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- CARD 1: Digitalización y Redes (Resplandor Azul/Cyan) -->
             <div
-                class="group relative bg-slate-900/30 backdrop-blur-xl rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_40px_rgba(6,182,212,0.25)] flex flex-col h-full overflow-hidden"
+                class="group relative bg-slate-900/90 rounded-[2rem] p-8 border border-white/10 hover:border-cyan-500/40 transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden shadow-2xl"
             >
-                <!-- Brillo interno al hacer hover -->
+                <!-- Glow Neón Superior (Luz concentrada en la esquina superior izquierda) -->
                 <div
-                    class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                    class="absolute top-[-30px] left-[-30px] w-36 h-36 bg-blue-500/30 blur-2xl rounded-full group-hover:bg-blue-500/50 transition-all duration-500"
                 >
                 </div>
 
-                <!-- Ícono Alegórico -->
+                <!-- Glow Neón Inferior (Resplandor estilo Neon UI) -->
                 <div
-                    class="relative w-16 h-16 bg-slate-950 border-2 border-slate-700/50 rounded-xl flex items-center justify-center mb-8 group-hover:border-cyan-400 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all duration-300 z-10"
+                    class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-blue-600/40 via-cyan-500/20 to-transparent blur-xl group-hover:h-32 transition-all duration-500 pointer-events-none"
                 >
-                    <svg
-                        class="w-7 h-7 text-cyan-400 group-hover:scale-110 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                        ></path>
-                    </svg>
                 </div>
 
-                <h3
-                    class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors z-10"
-                >
-                    Digitalización y Redes
-                </h3>
-                <p class="text-slate-300 leading-relaxed mb-8 flex-grow z-10">
-                    Transformamos tu local físico en un imán digital. Te
-                    ayudamos a ingresar a las redes sociales conectando tu
-                    tienda análoga con clientes en internet.
-                </p>
+                <div>
+                    <!-- Ícono con detalle Tecla -->
+                    <div
+                        class="relative w-12 h-12 bg-slate-950 border border-slate-800 rounded-xl flex items-center justify-center mb-6 shadow-[inset_0_-2px_0_#1e293b] group-hover:border-cyan-400/50 transition-colors"
+                    >
+                        <svg
+                            class="w-6 h-6 text-cyan-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                            ></path>
+                        </svg>
+                    </div>
 
-                <!-- Atajo visual -->
+                    <h3
+                        class="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors"
+                    >
+                        Digitalización & Redes
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                        Ingreso estratégico a redes sociales y Google Maps.
+                        Conectamos tu punto de venta físico con clientes locales
+                        en internet.
+                    </p>
+                </div>
+
                 <div
-                    class="mt-auto pt-5 border-t border-white/10 flex items-center gap-3 z-10"
+                    class="relative z-10 flex items-center justify-between pt-4 border-t border-white/5"
                 >
                     <span
-                        class="px-3 py-1.5 bg-slate-950 border border-slate-700/50 rounded-lg text-sm text-cyan-400 font-mono font-bold shadow-[inset_0_-2px_0_rgba(255,255,255,0.1)] group-hover:border-cyan-400 group-hover:bg-cyan-500/10 transition-all"
-                        >Alt</span
+                        class="text-xs font-mono text-cyan-400/80 bg-cyan-950/50 px-2 py-1 rounded border border-cyan-800/40"
+                        >Alt + Impacto</span
                     >
-                    <span
-                        class="text-sm text-slate-400 font-mono tracking-wider group-hover:text-white transition-colors"
-                        >+ Impacto</span
+                    <a
+                        href="#contacto"
+                        class="text-xs font-semibold text-white group-hover:translate-x-1 transition-transform flex items-center gap-1"
                     >
+                        Saber más <span class="text-cyan-400">→</span>
+                    </a>
                 </div>
             </div>
 
-            <!-- Tarjeta 2: Desarrollo Web (PURPLE) -->
+            <!-- CARD 2: Desarrollo Web & E-Commerce (Resplandor Naranja/Ámbar) -->
             <div
-                class="group relative bg-slate-900/30 backdrop-blur-xl rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_40px_rgba(168,85,247,0.25)] flex flex-col h-full overflow-hidden"
+                class="group relative bg-slate-900/90 rounded-[2rem] p-8 border border-white/10 hover:border-amber-500/40 transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden shadow-2xl"
             >
+                <!-- Glow Neón Superior -->
                 <div
-                    class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                    class="absolute top-[-30px] left-[-30px] w-36 h-36 bg-amber-500/30 blur-2xl rounded-full group-hover:bg-amber-500/50 transition-all duration-500"
                 >
                 </div>
 
+                <!-- Glow Neón Inferior -->
                 <div
-                    class="relative w-16 h-16 bg-slate-950 border-2 border-slate-700/50 rounded-xl flex items-center justify-center mb-8 group-hover:border-purple-400 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-all duration-300 z-10"
+                    class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-orange-600/40 via-amber-500/20 to-transparent blur-xl group-hover:h-32 transition-all duration-500 pointer-events-none"
                 >
-                    <svg
-                        class="w-7 h-7 text-purple-400 group-hover:scale-110 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                    </svg>
                 </div>
 
-                <h3
-                    class="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors z-10"
-                >
-                    Desarrollo Web
-                </h3>
-                <p class="text-slate-300 leading-relaxed mb-8 flex-grow z-10">
-                    Construimos tu sucursal 24/7. Desde <strong
-                        class="text-white">Landing Pages</strong
-                    > atractivas para captar clientes, hasta tiendas en línea (<strong
-                        class="text-white">E-commerce</strong
-                    >) optimizadas.
-                </p>
+                <div>
+                    <div
+                        class="relative w-12 h-12 bg-slate-950 border border-slate-800 rounded-xl flex items-center justify-center mb-6 shadow-[inset_0_-2px_0_#1e293b] group-hover:border-amber-400/50 transition-colors"
+                    >
+                        <svg
+                            class="w-6 h-6 text-amber-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                            ></path>
+                        </svg>
+                    </div>
+
+                    <h3
+                        class="text-2xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors"
+                    >
+                        Web & E-Commerce
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                        Páginas de alto impacto y tiendas en línea ultra rápidas
+                        optimizadas para convertir visitantes en ventas reales.
+                    </p>
+                </div>
 
                 <div
-                    class="mt-auto pt-5 border-t border-white/10 flex items-center gap-3 z-10"
+                    class="relative z-10 flex items-center justify-between pt-4 border-t border-white/5"
                 >
                     <span
-                        class="px-3 py-1.5 bg-slate-950 border border-slate-700/50 rounded-lg text-sm text-purple-400 font-mono font-bold shadow-[inset_0_-2px_0_rgba(255,255,255,0.1)] group-hover:border-purple-400 group-hover:bg-purple-500/10 transition-all"
-                        >Ctrl</span
+                        class="text-xs font-mono text-amber-400/80 bg-amber-950/50 px-2 py-1 rounded border border-amber-800/40"
+                        >Ctrl + Ventas</span
                     >
-                    <span
-                        class="text-sm text-slate-400 font-mono tracking-wider group-hover:text-white transition-colors"
-                        >+ Ventas</span
+                    <a
+                        href="#contacto"
+                        class="text-xs font-semibold text-white group-hover:translate-x-1 transition-transform flex items-center gap-1"
                     >
+                        Saber más <span class="text-amber-400">→</span>
+                    </a>
                 </div>
             </div>
 
-            <!-- Tarjeta 3: Automatización (BLUE) -->
+            <!-- CARD 3: Automatización & Bots (Resplandor Violeta/Púrpura) -->
             <div
-                class="group relative bg-slate-900/30 backdrop-blur-xl rounded-2xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_15px_40px_rgba(59,130,246,0.25)] flex flex-col h-full overflow-hidden"
+                class="group relative bg-slate-900/90 rounded-[2rem] p-8 border border-white/10 hover:border-purple-500/40 transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden shadow-2xl"
             >
+                <!-- Glow Neón Superior -->
                 <div
-                    class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                    class="absolute top-[-30px] left-[-30px] w-36 h-36 bg-purple-500/30 blur-2xl rounded-full group-hover:bg-purple-500/50 transition-all duration-500"
                 >
                 </div>
 
+                <!-- Glow Neón Inferior -->
                 <div
-                    class="relative w-16 h-16 bg-slate-950 border-2 border-slate-700/50 rounded-xl flex items-center justify-center mb-8 group-hover:border-blue-400 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 z-10"
+                    class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-purple-600/50 via-fuchsia-500/20 to-transparent blur-xl group-hover:h-32 transition-all duration-500 pointer-events-none"
                 >
-                    <svg
-                        class="w-7 h-7 text-blue-400 group-hover:scale-110 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
                 </div>
 
-                <h3
-                    class="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors z-10"
-                >
-                    Automatización y Bots
-                </h3>
-                <p class="text-slate-300 leading-relaxed mb-8 flex-grow z-10">
-                    Deja que la tecnología trabaje por ti. Implementamos <strong
-                        class="text-white">Chatbots</strong
-                    > para atender a tus clientes al instante y automatizamos procesos
-                    repetitivos.
-                </p>
+                <div>
+                    <div
+                        class="relative w-12 h-12 bg-slate-950 border border-slate-800 rounded-xl flex items-center justify-center mb-6 shadow-[inset_0_-2px_0_#1e293b] group-hover:border-purple-400/50 transition-colors"
+                    >
+                        <svg
+                            class="w-6 h-6 text-purple-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+
+                    <h3
+                        class="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors"
+                    >
+                        Automatización & Bots
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                        Implementación de chatbots inteligentes para WhatsApp y
+                        procesos automáticos para atender a tus clientes 24/7.
+                    </p>
+                </div>
 
                 <div
-                    class="mt-auto pt-5 border-t border-white/10 flex items-center gap-3 z-10"
+                    class="relative z-10 flex items-center justify-between pt-4 border-t border-white/5"
                 >
                     <span
-                        class="px-3 py-1.5 bg-slate-950 border border-slate-700/50 rounded-lg text-sm text-blue-400 font-mono font-bold shadow-[inset_0_-2px_0_rgba(255,255,255,0.1)] group-hover:border-blue-400 group-hover:bg-blue-500/10 transition-all"
-                        >Shift</span
+                        class="text-xs font-mono text-purple-400/80 bg-purple-950/50 px-2 py-1 rounded border border-purple-800/40"
+                        >Shift + Tiempo</span
                     >
-                    <span
-                        class="text-sm text-slate-400 font-mono tracking-wider group-hover:text-white transition-colors"
-                        >+ Tiempo</span
+                    <a
+                        href="#contacto"
+                        class="text-xs font-semibold text-white group-hover:translate-x-1 transition-transform flex items-center gap-1"
                     >
+                        Saber más <span class="text-purple-400">→</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -219,72 +233,18 @@
 </section>
 
 <style>
-    /* Cuadrícula Tecnológica */
-    .bg-grid {
-        background-size: 50px 50px;
+    .bg-grid-purple {
+        background-size: 40px 40px;
         background-image:
             linear-gradient(
                 to right,
-                rgba(255, 255, 255, 0.05) 1px,
+                rgba(168, 85, 247, 0.08) 1px,
                 transparent 1px
             ),
             linear-gradient(
                 to bottom,
-                rgba(255, 255, 255, 0.05) 1px,
+                rgba(168, 85, 247, 0.08) 1px,
                 transparent 1px
             );
-        animation: pan-grid 20s linear infinite;
-    }
-    @keyframes pan-grid {
-        0% {
-            transform: translateY(0);
-        }
-        100% {
-            transform: translateY(50px);
-        }
-    }
-
-    /* Animación de Orbes (Auroras) */
-    .orbe {
-        animation: mover-orbe 15s ease-in-out infinite alternate;
-    }
-    .orbe-cyan {
-        background-color: #06b6d4;
-        animation-delay: 0s;
-    }
-    .orbe-purple {
-        background-color: #a855f7;
-        animation-delay: -5s;
-    }
-    .orbe-blue {
-        background-color: #3b82f6;
-        animation-delay: -10s;
-    }
-
-    @keyframes mover-orbe {
-        0% {
-            transform: translate(0, 0) scale(1);
-        }
-        50% {
-            transform: translate(10vw, 5vh) scale(1.2);
-        }
-        100% {
-            transform: translate(-5vw, -5vh) scale(0.9);
-        }
-    }
-
-    /* Gradiente animado para el texto principal */
-    .animate-gradient-x {
-        background-size: 200% 200%;
-        animation: gradiente-texto 5s ease infinite;
-    }
-    @keyframes gradiente-texto {
-        0%,
-        100% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
     }
 </style>

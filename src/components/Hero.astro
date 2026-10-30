@@ -2,219 +2,92 @@
 // src/components/Hero.astro
 ---
 
-<main
-    class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-slate-950"
->
-    <!-- ========================================== -->
-    <!-- CAPA DE FONDO: Matrix, Grid y Auroras      -->
-    <!-- ========================================== -->
-    <div class="absolute inset-0 pointer-events-none z-0">
-        <!-- Cuadrícula en movimiento infinito -->
-        <div class="absolute inset-0 bg-grid opacity-30"></div>
+<section class="relative min-h-screen bg-slate-950 pt-36 pb-20 overflow-hidden flex flex-col justify-between">
+  
+  <!-- FONDOS Y EFECTOS DE LUZ (Glow Neón Violeta) -->
+  <div class="absolute inset-0 pointer-events-none">
+    <!-- Grid sutil de fondo -->
+    <div class="absolute inset-0 bg-grid-purple opacity-15"></div>
+    <!-- Luz curva superior tipo domo violeta -->
+    <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-purple-600/40 via-indigo-600/20 to-transparent blur-[120px] rounded-full"></div>
+  </div>
 
-        <!-- Auroras (Orbes) dinámicas -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-            <div
-                class="orbe orbe-cyan absolute -top-[10%] -left-[10%] w-[50vw] h-[50vw] rounded-full blur-[150px] mix-blend-screen opacity-40"
-            >
-            </div>
-            <div
-                class="orbe orbe-purple absolute top-[20%] right-[0%] w-[45vw] h-[45vw] rounded-full blur-[150px] mix-blend-screen opacity-30"
-            >
-            </div>
-        </div>
-
-        <!-- Lluvia sutil de código de fondo -->
-        <div class="lluvia-teclas opacity-60">
-            <span class="p1 text-cyan-500/20 font-mono text-3xl">Ctrl</span>
-            <span class="p2 text-purple-500/20 font-mono text-xl"
-                >&lt;/&gt;</span
-            >
-            <span class="p3 text-slate-500/20 font-mono text-4xl">Shift</span>
-            <span class="p4 text-cyan-400/20 font-mono text-2xl">{}</span>
-        </div>
+  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+    
+    <!-- BADGE NOVEDAD / TECLA -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full bg-purple-950/60 border border-purple-500/30 backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+      <span class="px-1.5 py-0.5 bg-purple-500/20 text-purple-300 font-mono text-[10px] rounded border border-purple-400/30">Ctrl + Shift</span>
+      <span class="text-xs text-purple-200">De lo Análogo a lo Digital</span>
     </div>
 
-    <!-- ========================================== -->
-    <!-- CONTENIDO PRINCIPAL                        -->
-    <!-- ========================================== -->
-    <div
-        class="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center text-center"
-    >
-        <!-- Teclas Animadas (Mantenemos la estructura 3D CSS global) -->
-        <div
-            class="flex gap-4 md:gap-6 mb-12 select-none perspective-1000 group"
-        >
-            <div
-                class="tecla-animada border-cyan-500/30 group-hover:border-cyan-400 transition-colors shadow-[0_15px_30px_rgba(6,182,212,0.1)]"
-            >
-                <span
-                    class="text-xs font-mono text-slate-400 absolute top-2 left-2"
-                    >Ctrl</span
-                >
-            </div>
-            <div
-                class="tecla-animada delay-100 border-purple-500/30 group-hover:border-purple-400 transition-colors shadow-[0_15px_30px_rgba(168,85,247,0.1)]"
-            >
-                <span
-                    class="text-xs font-mono text-slate-400 absolute top-2 left-2"
-                    >Shift</span
-                >
-            </div>
-            <div
-                class="tecla-animada delay-200 border-blue-500/30 group-hover:border-blue-400 transition-colors shadow-[0_15px_30px_rgba(59,130,246,0.1)]"
-            >
-                <span
-                    class="text-xs font-mono text-cyan-400 font-bold drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]"
-                    >Go</span
-                >
-            </div>
-        </div>
+    <!-- TÍTULO PRINCIPAL -->
+    <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+      Transforma tu negocio local.<br/>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-indigo-300 to-cyan-300 drop-shadow-[0_0_35px_rgba(168,85,247,0.6)]">
+        Estrategia Digital & Desarrollo Web.
+      </span>
+    </h1>
 
-        <!-- Título con Gradiente Animado -->
-        <h1
-            class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-white drop-shadow-lg"
-        >
-            Da el salto de lo Análogo a <br />
-            <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-500 animate-gradient-x drop-shadow-[0_0_25px_rgba(6,182,212,0.6)]"
-            >
-                lo Digital.
-            </span>
-        </h1>
+    <!-- SUBTÍTULO -->
+    <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+      Llevamos tu tienda física al entorno digital. Construimos sitios web, e-commerces y automatizaciones rápidas que escalan tus ventas.
+    </p>
 
-        <!-- Copy principal -->
-        <p
-            class="text-lg md:text-xl text-slate-300 max-w-2xl mb-12 leading-relaxed bg-slate-900/30 backdrop-blur-sm p-4 rounded-xl border border-white/5 shadow-xl"
-        >
-            Modernizamos tu negocio. Construimos páginas web e e-commerces
-            rápidos, atractivos y fáciles de administrar para que conectes con
-            tus clientes hoy mismo.
-        </p>
-
-        <!-- Botones de Acción (Estilo Glassmorphism y Neón) -->
-        <div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-            <button
-                class="bg-cyan-500 text-slate-950 px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyan-400 hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.8)]"
-            >
-                Quiero mi sitio web
-            </button>
-            <button
-                class="bg-slate-900/40 backdrop-blur-xl border border-white/10 text-slate-300 px-8 py-4 rounded-xl font-bold text-lg hover:border-purple-500 hover:text-purple-300 hover:scale-105 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(168,85,247,0.4)]"
-            >
-                Ver paquetes
-            </button>
-        </div>
+    <!-- BOTONES DE ACCIÓN (Estilo Plantilla) -->
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-20">
+      <a href="#contacto" class="w-full sm:w-auto bg-white text-slate-950 px-6 py-3 rounded-full font-bold text-sm hover:bg-slate-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2">
+        Agendar una Demo <span>→</span>
+      </a>
+      <a href="#servicios" class="w-full sm:w-auto bg-purple-950/40 border border-purple-500/40 text-purple-200 px-6 py-3 rounded-full font-semibold text-sm hover:border-purple-400 hover:bg-purple-900/30 transition-all backdrop-blur-md">
+        Explorar Servicios
+      </a>
     </div>
-</main>
+
+    <!-- SECCIÓN DE MÉTRICAS / STATS BAR -->
+    <div class="relative py-8 my-8 border-y border-purple-500/10 bg-slate-950/40 backdrop-blur-sm">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-3xl font-extrabold text-white font-mono">100%</p>
+          <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Disponibilidad</p>
+        </div>
+        <div>
+          <p class="text-3xl font-extrabold text-purple-400 font-mono">24/7</p>
+          <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Atención automatizada</p>
+        </div>
+        <div>
+          <p class="text-3xl font-extrabold text-white font-mono">&lt; 1s</p>
+          <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Carga Ultra Rápida</p>
+        </div>
+        <div>
+          <p class="text-3xl font-extrabold text-indigo-400 font-mono">3x</p>
+          <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Mayor Alcance</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN SOCIAL PROOF / LOGOS -->
+    <div class="pt-8">
+      <p class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-6">
+        Impulsando la digitalización de marcas y locales
+      </p>
+      
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+        <span class="font-bold text-slate-400 text-sm tracking-wider">MARCA 01</span>
+        <span class="font-bold text-slate-400 text-sm tracking-wider">LOCAL STUDIO</span>
+        <span class="font-bold text-slate-400 text-sm tracking-wider">E-COMMERCE CO</span>
+        <span class="font-bold text-slate-400 text-sm tracking-wider">AGENCY HUB</span>
+        <span class="font-bold text-slate-400 text-sm tracking-wider">SaaS TECH</span>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <style>
-    /* Cuadrícula Tecnológica */
-    .bg-grid {
-        background-size: 50px 50px;
-        background-image:
-            linear-gradient(
-                to right,
-                rgba(255, 255, 255, 0.05) 1px,
-                transparent 1px
-            ),
-            linear-gradient(
-                to bottom,
-                rgba(255, 255, 255, 0.05) 1px,
-                transparent 1px
-            );
-        animation: pan-grid 20s linear infinite;
-    }
-    @keyframes pan-grid {
-        0% {
-            transform: translateY(0);
-        }
-        100% {
-            transform: translateY(50px);
-        }
-    }
-
-    /* Orbes Neón */
-    .orbe {
-        animation: mover-orbe 15s ease-in-out infinite alternate;
-    }
-    .orbe-cyan {
-        background-color: #06b6d4;
-        animation-delay: 0s;
-    }
-    .orbe-purple {
-        background-color: #a855f7;
-        animation-delay: -5s;
-    }
-
-    @keyframes mover-orbe {
-        0% {
-            transform: translate(0, 0) scale(1);
-        }
-        50% {
-            transform: translate(10vw, 5vh) scale(1.2);
-        }
-        100% {
-            transform: translate(-5vw, -5vh) scale(0.9);
-        }
-    }
-
-    /* Animación Lluvia (versión ligera para el Hero) */
-    .lluvia-teclas span {
-        position: absolute;
-        top: -10%;
-        animation: caer 25s linear infinite;
-    }
-    .p1 {
-        left: 15%;
-        animation-delay: 0s;
-        animation-duration: 22s;
-    }
-    .p2 {
-        left: 45%;
-        animation-delay: -5s;
-        animation-duration: 27s;
-    }
-    .p3 {
-        left: 75%;
-        animation-delay: -12s;
-        animation-duration: 20s;
-    }
-    .p4 {
-        left: 85%;
-        animation-delay: -2s;
-        animation-duration: 25s;
-    }
-
-    @keyframes caer {
-        0% {
-            transform: translateY(0) rotate(0deg);
-            opacity: 0;
-        }
-        10% {
-            opacity: 1;
-        }
-        90% {
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(120vh) rotate(360deg);
-            opacity: 0;
-        }
-    }
-
-    /* Gradiente animado del texto */
-    .animate-gradient-x {
-        background-size: 200% 200%;
-        animation: gradiente-texto 5s ease infinite;
-    }
-    @keyframes gradiente-texto {
-        0%,
-        100% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-    }
+  .bg-grid-purple {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+  }
 </style>
